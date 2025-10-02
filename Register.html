@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register Ngô Viết Thanh</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <p>Register your Jackson Electronics product here</p>
+        <form>
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstname"></td>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastname"></td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="3"><input type="text" name="address1"></td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="3"><input type="text" name="address2"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city"></td>
+                    <td>State:</td>
+                    <td><input type="text" name="state"></td>
+                    <td>Zip:</td>
+                    <td><input type="text" name="zip"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td colspan="3"><input type="text" name="country" value="Viet Name"></td>
+                </tr>
+            </table>
+            <hr>
+            
+            <div class="line"></div>
+            <table>
+                <tr>
+                    <td>Product:</td>
+                    <td colspan="3">
+                        <select>
+                            <option>ScanMaster</option>
+                            <option>Printer</option>
+                            <option>Camera</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td><input type="text" name="date"></td>
+                    <td>Serial#:</td>
+                    <td><input type="text" name="serial"></td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td colspan="3">
+                        <input type="radio" name="used"> Home
+                        <input type="radio" name="used"> Business
+                        <input type="radio" name="used"> Government
+                        <input type="radio" name="used"> Educational Institution
+                        <input type="radio" name="used"> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>System (check all that appky):</td>
+                    <td colspan="3">
+                        <input type="checkbox"> Windows
+                        <input type="checkbox"> Macintosh
+                        <input type="checkbox"> UNIX
+                        <input type="checkbox"> Other
+                    </td>
+                </tr>
+            <tr><td colspan=4><hr></td></tr>
+                <tr>
+                    <td>Comments?:</td>
+                    <td colspan="3"><textarea rows="4"></textarea></td>
+                </tr>
+            </table>
+        
+            <div class="buttons">
+                <input type="button" value="Click to register">
+                <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
