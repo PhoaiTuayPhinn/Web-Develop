@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Ngô Viết Thanh</title>
+    <script>
+        function show_image()
+        {
+            //step 1: Get image object by Taylor_avatar id
+            img=document.getElementById("Taylor_avatar")
+            //step 2: set style attribute for show image
+            img.setAttribute("style","display:block")
+        }
+        function hide_image()
+        {
+            //step 1: Get image object by Taylor_avatar id
+            img=document.getElementById("Taylor_avatar")
+            //step 2: set style attribute for show image
+            img.setAttribute("style","display:none")
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <input type="radio" name="myimage" id="img1" onchange="show_image()"/>
+        <label for="img1">Show Image</label>
+        <br/>
+        <input type="radio" name="myimage" id="im2"onchange="hide_image()"/>
+        <label for="img2">Hid Image</label>
+        <br/>
+        <img src="../ex14/images/Taylor.jpg" id="Taylor_avatar" name="Taylor_avatar"/>
+    </form>
+</body>
+</html>
