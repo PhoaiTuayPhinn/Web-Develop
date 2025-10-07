@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Registration - Ngô Viết Thanh</title>
+        <style>
+            body{
+                background-color: rgb(11, 124, 124);
+            }
+            h1,p{
+                color:aliceblue
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <img src="images/Logo.gif">
+        </div>
+        <h1 style="color:white; font-size: 28pt;" align="center">Newborn Registration</h1>
+        <form>
+            <p>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+            </p>
+            <p>
+                <label for="fname">1) Infant's first name:</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname"> Last name:</label>
+                <input type="text" id="lname" name="lname">
+            </p>
+            <p>
+                <label for="record">2) Medical Record#</label>
+                <input type="text" id="record" name="record">
+            </p>
+            <p>
+                <label for="dob">3) Date of birth</label>
+                <input type="date" id="dob" name="dob">
+            </p>
+            <p>
+                <label for="weight">4) Birth Weight:</label>
+                <input type="text" id="weight" name="weight">
+            </p>
+            <p>
+                <label for="score">5) APGAR score:</label>
+                <input type="text" id="score" name="score">
+            </p>
+            <p>
+                <label for="mfname">6) Mother's first name:</label>
+                <input type="text" id="mfname" name="mfname">
+                <label for="mlname"> Last name:</label>
+                <input type="text" id="mlname" name="mlname">
+            </p>
+            <p>
+                <label for="ffname">7) Father's first name:</label>
+                <input type="text" id="ffname" name="ffname">
+                <label for="flname"> Last name:</label>
+                <input type="text" id="flname" name="flname">
+            </p>
+            <p>
+                8) Physician (check all that apply)</p>
+                <select id="Physician" name="Physician" multible size="4">
+                    <option>Dr. Warren Albert</option>
+                    <option>Dr. Maria Alvarez</option>
+                    <option>Dr. Karen Brinkman</option>
+                    <option>Dr. Micheal Kerry</option>
+                </select>
+            <div style="text-align: center;">
+                <button type="submit" id="register" name="register">Register</button>
+                <button type="reset" id="cancel" name="cancel">Cancel</button>
+            </div>
+        </form>
+    </body>
+</html>
