@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Ziết Thank</title>
+        <script type="text/javascript">
+            var p_item={
+                ID:"P01",
+                Name:"Coca",
+                Quantity:"15",
+                Price:"30",
+                TotalValue:function()
+                {
+                    return this.Quantity*this.Price
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>ID:</td>
+                <td id="td_id"></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td id="td_name"></td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td id="td_quantity"></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td id="td_price"></td>
+            </tr>
+            <tr>
+                <td>Total value:</td>
+                <td id="td_value"></td>
+            </tr>
+            <tr>
+                <td>Image:</td>
+                <td>
+                    <img id="img_product"/>
+                    <img src="../images/coca.png.webp" width="100"; height="200">
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            td_id.innerText=p_item.ID
+            td_name.innerText=p_item.Name
+            td_quantity.innerText=p_item.Quantity
+            td_price.innerText=p_item.Price
+            td_value.innerText=p_item.TotalValue()
+        </script>
+    </body>
+</html>

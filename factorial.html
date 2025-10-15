@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Ziết Thank</title>
+        <script src="../js/mainjs.js"></script>
+        <script type="text/javascript">
+            function call_factorial()
+            {
+                n=my_form.input_n.value
+                result=call_factorial(n)
+                td_result.innerText=result
+            }
+        </script>
+    </head>
+    <body>
+        <form name="my_love">
+            <table border="1">
+                <tr>
+                    <td>n:</td>
+                    <td>
+                        <input type="text" name="input_n" id="input_n" value="5"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" onclick="call_factorial()">Calc 1</button>
+                        <button type="button" onclick="use_factorial(input_n.value,td_result)">Calc 2</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td id="td_result"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
