@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Ziết Thank</title>
+        <script type="text/javascript">
+            function do_save_customer()
+            {
+                id=my_form.cus_id.value
+                name=document.getElementById("name").value
+                if (document.getElementById("vip").checked){
+                    type='VIP'
+                    color="background-color:yellow;"
+                }
+                else {
+                    type='NORMAL'
+                    color="background-color:white;"
+                }
+                tr=document.createElement("tr")
+                panel=document.getElementById("customer_tbody")
+                panel.appendChild(tr)
+
+                td_id=document.createElement("td")
+                td_id.innerText=id
+                tr.appendChild(td_id)
+
+                td_name=document.createElement("td")
+                td_name.innerText=name
+                tr.appendChild(td_name)
+
+                td_type=document.createElement("td")
+                td_type.innerText=type
+                tr.appendChild(td_type)
+                tr.style=color
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="my_form">
+            <fieldset>
+                <legend>Customer Information:</legend>
+                <table border="1">
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <input type="text" name="cus_id" id="cus_name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <input type="text" id="name" name="name">
+                        </td>
+                            
+                        
+                    <tr>
+                        <td>Type:</td>
+                        <td>
+                            <input type="checkbox" id="vip" name="vip">
+                            <label for="cus_type">VIP</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button" onclick="c=do_save_customer()">Save Customer</button></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="customer_tbody">
+
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
