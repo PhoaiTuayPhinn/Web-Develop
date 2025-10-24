@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script type="text/javascript">
+            function cal_analyzed()
+            {
+                str=my_form.p_item.value
+                p1=str.indexOf(";")
+                p2=str.lastIndexOf(";")
+                td_name.innerText=str.substring(p1+1,p2)
+                td_id.innerText=str.substring(0,p1)
+                td_price.innerText=str.substring(p2+1)
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="my_form">
+            <table border="1">
+                <tr>
+                    <td>Input:</td>
+                    <td>
+                        <input type="text" name="p_item" id="p_item" value="p01;coca;35"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <button type="button" onclick="cal_analyzed()">Analyzed</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID:</td>
+                    <td id="td_id"></td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td id="td_name"></td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td id="td_price"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="td_time"></td>
+                </tr>
+            </table>
+            <script type="text/javascript">
+                function display_digital_clock()
+                {
+                    time=new Date()
+                    str=time.toLocaleTimeString()
+                    td_time.innerText=str
+                }
+                setInterval(display_digital_clock,1000)
+            </script>
+        </form>
+    </body>
+</html>
