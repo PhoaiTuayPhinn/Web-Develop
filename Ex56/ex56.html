@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 56 - Thanh Thao</title>
+    <script type="text/javascript">
+
+        function enterData() {
+            input = document.getElementById("input").value
+            document.getElementById("result").value = input
+        }
+
+        function toUppercase() {
+            input = document.getElementById("input").value
+            document.getElementById("result").value = input.toUpperCase()
+        }
+
+        function toLowercase() {
+            input = document.getElementById("input").value
+            document.getElementById("result").value = input.toLowerCase()
+        }
+
+        function countUppercase() {
+            input = document.getElementById("input").value
+            count = 0
+            for (i = 0; i < input.length; i++) {
+                ch = input.charAt(i)
+                if (ch >= 'A' && ch <= 'Z')
+                    count++
+            }
+            document.getElementById("result").value = "Uppercase letters: " + count
+        }
+
+        function countLowercase() {
+            input = document.getElementById("input").value
+            count = 0
+            for (i = 0; i < input.length; i++) {
+                ch = input.charAt(i)
+                if (ch >= 'a' && ch <= 'z')
+                    count++
+            }
+            document.getElementById("result").value = "Lowercase letters: " + count
+        }
+
+        function wordCount() {
+            input = document.getElementById("input").value.trim()
+            if (input == "")
+                document.getElementById("result").value = "Word count: 0"
+            else {
+                words = input.split(/\s+/)
+                document.getElementById("result").value = "Word count: " + words.length
+            }
+        }
+
+        function oneWordPerLine() {
+            input = document.getElementById("input").value.trim()
+            words = input.split(/\s+/)
+            output = ""
+            for (i = 0; i < words.length; i++) {
+                output += words[i] + "\n"
+            }
+            document.getElementById("result").value = output
+        }
+
+        function printVowelsConsonants() {
+            input = document.getElementById("input").value.toLowerCase()
+            vowels = 0
+            consonants = 0
+            for (i = 0; i < input.length; i++) {
+                ch = input.charAt(i)
+                if ("aeiou".indexOf(ch) != -1)
+                    vowels++
+                else if (ch >= 'a' && ch <= 'z')
+                    consonants++
+            }
+            document.getElementById("result").value =
+                "Vowels: " + vowels + "\nConsonants: " + consonants
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2><i>Exercise 56: String Processing</i></h2>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th colspan="2">Using String Processing functions</th>
+        </tr>
+        <tr>
+            <td><b>Input Data:</b><br>
+                <textarea id="input" rows="5" cols="30"></textarea>
+            </td>
+            <td><b>Result:</b><br>
+                <textarea id="result" rows="5" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="enterData()">Enter Data</button></td>
+            <td><button onclick="countUppercase()">Count the number of uppercase characters</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="toUppercase()">Uppercase display</button></td>
+            <td><button onclick="oneWordPerLine()">Output one word per line</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="toLowercase()">Lowercase display</button></td>
+            <td><button onclick="wordCount()">Word count</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="countLowercase()">Count the number of lowercase characters</button></td>
+            <td><button onclick="printVowelsConsonants()">Print vowels, consonants</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <a href="https://www.w3schools.com/js/" target="_blank">W3C’s String Processing Website</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

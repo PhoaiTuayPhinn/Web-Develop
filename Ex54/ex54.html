@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 54 - Thanh Thao</title>
+  <script type="text/javascript">
+    function getValues() {
+      var a = parseFloat(document.getElementById("a").value);
+      var b = parseFloat(document.getElementById("b").value);
+      var c = parseFloat(document.getElementById("c").value);
+      return { a: a, b: b, c: c };
+    }
+
+    function showResult(value) {
+      document.getElementById("result").value = value;
+    }
+
+    function findMax() {
+      var values = getValues();
+      showResult(Math.max(values.a, values.b, values.c));
+    }
+
+    function findMin() {
+      var values = getValues();
+      showResult(Math.min(values.a, values.b, values.c));
+    }
+
+    function sinA() {
+      var values = getValues();
+      showResult(Math.sin(values.a * Math.PI / 180));
+    }
+
+    function cosA() {
+      var values = getValues();
+      showResult(Math.cos(values.a * Math.PI / 180));
+    }
+
+    function multiplyAB() {
+      var values = getValues();
+      showResult(values.a * values.b);
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Exercise 54: Math Function</h3>
+  <table border="1" cellpadding="5">
+    <tr>
+      <td>a:</td>
+      <td><input type="text" id="a" value="30"></td>
+    </tr>
+    <tr>
+      <td>b:</td>
+      <td><input type="text" id="b" value="45"></td>
+    </tr>
+    <tr>
+      <td>c:</td>
+      <td><input type="text" id="c" value="90"></td>
+    </tr>
+    <tr>
+      <td>Result:</td>
+      <td><input type="text" id="result" readonly></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <button onclick="findMax()">MAX</button>
+        <button onclick="findMin()">MIN</button>
+        <button onclick="sinA()">sin(a)</button>
+        <button onclick="cosA()">cos(a)</button>
+        <button onclick="multiplyAB()">a*b</button>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

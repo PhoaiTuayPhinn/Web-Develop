@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 55 - Thanh Thao</title>
+  <script type="text/javascript">
+    function findSolution() {
+      var a = parseFloat(document.getElementById("a").value);
+      var b = parseFloat(document.getElementById("b").value);
+      var c = parseFloat(document.getElementById("c").value);
+      var result = document.getElementById("result");
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        result.value = "Please enter valid numbers!";
+        return;
+      }
+
+      if (a == 0) {
+        if (b == 0) {
+          result.value = (c == 0) ? "Infinite solutions" : "No solution";
+        } else {
+          result.value = "Linear equation: x = " + (-c / b);
+        }
+        return;
+      }
+
+      var delta = b * b - 4 * a * c;
+
+      if (delta < 0) {
+        result.value = "No real solution";
+      } else if (delta == 0) {
+        var x = -b / (2 * a);
+        result.value = "Double root: x = " + x;
+      } else {
+        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        result.value = "x₁ = " + x1 + " ; x₂ = " + x2;
+      }
+    }
+
+    function clearFields() {
+      document.getElementById("a").value = "";
+      document.getElementById("b").value = "";
+      document.getElementById("c").value = "";
+      document.getElementById("result").value = "";
+    }
+  </script>
+</head>
+
+<body>
+  <h3>The quadratic equation</h3>
+  <table border="1" cellpadding="5" style="border-collapse:collapse;">
+    <tr>
+      <th colspan="2" style="background-color:#e7f2e8;">The quadratic equation</th>
+    </tr>
+    <tr>
+      <td>a:</td>
+      <td><input type="text" id="a"></td>
+    </tr>
+    <tr>
+      <td>b:</td>
+      <td><input type="text" id="b"></td>
+    </tr>
+    <tr>
+      <td>c:</td>
+      <td><input type="text" id="c"></td>
+    </tr>
+    <tr>
+      <td>Result:</td>
+      <td><input type="text" id="result" readonly style="width:100%;"></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <button onclick="findSolution()">Find solution</button>
+        <button onclick="clearFields()">Clear</button>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
