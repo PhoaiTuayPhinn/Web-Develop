@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script type="text/javascript">
+            function do_save_customer()
+            {
+                id=my_form.cus_id.value
+                name=my_form.cus_name.value
+                type="VIP"
+                cus_type=my_form.cus_type.checked
+                if(cus_type==false)
+                    type="NORMAL"
+                
+                customer_tbody=document.getElementById("customer_tbody")
+                row=document.createElement("tr")
+                if(type=="VIP")
+                {
+                    row.setAttribute("style","background-color:yellow") 
+                }
+                customer_tbody.appendChild(row)
+                
+                td_id=document.createElement("td")
+                td_id.innerText=id
+                row.appendChild(td_id)
+
+                td_name=document.createElement("td")
+                td_name.innerText=name
+                row.appendChild(td_name)
+
+                td_type=document.createElement("td")
+                td_type.innerText=type
+                row.appendChild(td_type)
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="my_form">
+            <fieldset>
+                <legend>Customer Information:</legend>
+                <table border="1">
+                    <tr>
+                        <td>ID:</td>
+                        <td><input type="text" name="cus_id" id="cus_id"/></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="cus_name" id="cus_name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Type:</td>
+                        <td>
+                            <input type="checkbox" name="cus_type" id="cus_type"/>
+                            <label for="cus_type">VIP</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" onclick="do_save_customer()">Save Customer</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="customer_tbody">
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

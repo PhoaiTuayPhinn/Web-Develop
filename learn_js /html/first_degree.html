@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>First Degree - Tèo</title>
+        <script type="text/javascript">
+            function do_solution()
+            {
+                a=eval(my_form.a_coefficient.value)
+                b=eval(my_form.b_coefficient.value)
+                result_td=document.getElementById("result_td")
+                result=""
+                if(a==0 && b==0)
+                {
+                    result="INF"   
+                }
+                else if(a==0 && b!=0)
+                {
+                    result="No solution"
+                }
+                else
+                {
+                    result="x="+(-b/a)
+                }
+                //result_td.innerHTML=`${result}`
+                result_td.innerHTML=result
+            }
+           function do_clear()
+           {
+                document.getElementById("result_td").innerHTML=""
+                my_form.a_coefficient.focus()
+           }
+           function open_help()
+           {
+                if(confirm("open help?"))
+                {
+                    window.open("https://uel.edu.vn","_blank")
+                }
+           }
+        </script>
+    </head>
+    <body>
+        <form name="my_form">
+            <table>
+                <tr>
+                    <td>A coeff:</td>
+                    <td>
+                        <input type="text" name="a_coefficient" id="a_coefficient"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B coeff:</td>
+                    <td>
+                        <input type="text" name="b_coefficient" id="b_coefficient"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td id="result_td"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <button type="button" onclick="do_solution()">Solution</button>
+                        <button type="reset" onclick="do_clear()">Reset</button>
+                        |
+                        <button type="button" onclick="open_help()">Help</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
